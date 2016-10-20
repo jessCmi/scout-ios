@@ -61,7 +61,10 @@ class FoodViewController: UINavigationController {
             pushViewController(visitable, animated: true)
         } else if action == .Replace {
             
-            // replaced old action with the following that seems to look better
+            //popViewControllerAnimated(false)
+            //pushViewController(visitable, animated: false)
+            
+            // replaced old action with the following that seems to work better
             popViewControllerAnimated(true)
             setViewControllers([visitable], animated: false)
         }

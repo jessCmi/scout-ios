@@ -59,8 +59,11 @@ class DiscoverViewController: UINavigationController {
         if action == .Advance {
             pushViewController(visitable, animated: true)
         } else if action == .Replace {
+            
             //popViewControllerAnimated(false)
             //pushViewController(visitable, animated: false)
+            
+            // replaced old action with the following that seems to work better
             popViewControllerAnimated(true)
             setViewControllers([visitable], animated: false)
         }
@@ -84,10 +87,17 @@ class DiscoverViewController: UINavigationController {
             (alert: UIAlertAction!) -> Void in
             print("Bothell was selected")
             
+            // TODO: replace the campus setting at the appDelegate level. Not working yet!
+            // For now, this campus is only local to the the discover controller.
             let campus = "bothell"
             let URL = NSURL(string: "\(host)/\(campus)")!
             
+            // present the visitable URL with specific replace action
             self.presentVisitableForSession(self.session, URL: URL, action: .Replace)
+            
+            // TODO: when the campus is set at the appDelegate level, should just be able to 
+            // call self.URL instead since campus will have been reset globally.
+            // self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
             
         })
         let tacomaAction = UIAlertAction(title: "Tacoma", style: .Default, handler: {
