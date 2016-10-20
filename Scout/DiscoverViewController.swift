@@ -15,6 +15,7 @@ class DiscoverViewController: UINavigationController {
     var URL: NSURL {
         return NSURL(string: "\(host)/\(campus)/")!
     }
+    
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {
@@ -58,8 +59,10 @@ class DiscoverViewController: UINavigationController {
         if action == .Advance {
             pushViewController(visitable, animated: true)
         } else if action == .Replace {
-            popViewControllerAnimated(false)
-            pushViewController(visitable, animated: false)
+            //popViewControllerAnimated(false)
+            //pushViewController(visitable, animated: false)
+            popViewControllerAnimated(true)
+            setViewControllers([visitable], animated: false)
         }
         
         session.visit(visitable)
@@ -80,6 +83,12 @@ class DiscoverViewController: UINavigationController {
         let bothellAction = UIAlertAction(title: "Bothell", style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Bothell was selected")
+            
+            let campus = "bothell"
+            let URL = NSURL(string: "\(host)/\(campus)")!
+            
+            self.presentVisitableForSession(self.session, URL: URL, action: .Replace)
+            
         })
         let tacomaAction = UIAlertAction(title: "Tacoma", style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
