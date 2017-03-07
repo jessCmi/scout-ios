@@ -56,8 +56,8 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
         let sessionURL = session.webView.URL?.absoluteString
         
         // print the 2 urls the app has for comparison
-        //print("requested url \(URL)")
-        //print("session url \(sessionURL!)")
+        print("requested url \(URL)")
+        print("session url \(sessionURL!)")
         
         // check to see if the campus has changed from what was previously set in session
         if sessionURL!.lowercaseString.rangeOfString(campus) == nil {
@@ -127,25 +127,31 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
         let optionMenu = UIAlertController(title: nil, message: "Choose Campus", preferredStyle: .ActionSheet)
         
         // 2
-        let seattleAction = UIAlertAction(title: "Seattle", style: .Default, handler: {
+        let smithAction = UIAlertAction(title: "Smith", style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
             //print("Seattle was selected")
-            campus = "seattle"
+            campus = "smith"
             self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
         })
-        let bothellAction = UIAlertAction(title: "Bothell", style: .Default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            //print("Bothell was selected")
-            campus = "bothell"
-            print(self.URL)
-            self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
-        })
-        let tacomaAction = UIAlertAction(title: "Tacoma", style: .Default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            //print("Tacoma was selected")
-            campus = "tacoma"
-            self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
-        })
+//        let seattleAction = UIAlertAction(title: "Seattle", style: .Default, handler: {
+//            (alert: UIAlertAction!) -> Void in
+//            //print("Seattle was selected")
+//            campus = "seattle"
+//            self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
+//        })
+//        let bothellAction = UIAlertAction(title: "Bothell", style: .Default, handler: {
+//            (alert: UIAlertAction!) -> Void in
+//            //print("Bothell was selected")
+//            campus = "bothell"
+//            print(self.URL)
+//            self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
+//        })
+//        let tacomaAction = UIAlertAction(title: "Tacoma", style: .Default, handler: {
+//            (alert: UIAlertAction!) -> Void in
+//            //print("Tacoma was selected")
+//            campus = "tacoma"
+//            self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
+//        })
         
         //
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
@@ -155,9 +161,10 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
         
         
         // 4
-        optionMenu.addAction(seattleAction)
-        optionMenu.addAction(bothellAction)
-        optionMenu.addAction(tacomaAction)
+        optionMenu.addAction(smithAction)
+//        optionMenu.addAction(seattleAction)
+//        optionMenu.addAction(bothellAction)
+//        optionMenu.addAction(tacomaAction)
         
         optionMenu.addAction(cancelAction)
         
