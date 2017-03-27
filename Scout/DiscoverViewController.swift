@@ -22,20 +22,20 @@ class DiscoverViewController: ApplicationController {
         let visitable = VisitableViewController(URL: URL)
         
         // discover home
-        if URL.path == "/h/\(campus)" {
-            
-            let campusButton : UIBarButtonItem = UIBarButtonItem(title: (campus).capitalizedString, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ApplicationController.chooseCampus))
-            //let settingsButton : UIBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ApplicationController.openSettings))
-            
-            //let buttonIcon = UIImage(named: "ic_settings")
-            //settingsButton.image = buttonIcon
-            
-            visitable.navigationItem.rightBarButtonItem = campusButton
-            //visitable.navigationItem.rightBarButtonItem = settingsButton
-            
-            visitable.navigationItem.setRightBarButtonItems([/*settingsButton,*/ campusButton], animated: true)
-            
-        }
+//        if URL.path == "/h/\(campus)" {
+//            
+//            let campusButton : UIBarButtonItem = UIBarButtonItem(title: (campus).capitalizedString, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ApplicationController.chooseCampus))
+//            //let settingsButton : UIBarButtonItem = UIBarButtonItem(title: " ", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ApplicationController.openSettings))
+//            
+//            //let buttonIcon = UIImage(named: "ic_settings")
+//            //settingsButton.image = buttonIcon
+//            
+//            visitable.navigationItem.rightBarButtonItem = campusButton
+//            //visitable.navigationItem.rightBarButtonItem = settingsButton
+//            
+//            visitable.navigationItem.setRightBarButtonItems([/*settingsButton,*/ campusButton], animated: true)
+//            
+//        }
         
         // handle actions
         if action == .Advance {
