@@ -16,7 +16,7 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
     let locationManager = CLLocationManager()
     
     var URL: NSURL {
-        return NSURL(string: "\(host)/\(campus)/")!
+        return NSURL(string: "\(host)\(campus)/")!
     }
             
     private let webViewProcessPool = WKProcessPool()
@@ -88,7 +88,7 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
     
     // show filter
     func presentFilter() {
-        let URL = NSURL(string: "\(host)/\(campus)/\(app_type)/filter/?\(params)")!
+        let URL = NSURL(string: "\(host)\(campus)/\(app_type)/filter/?\(params)")!
         //print(URL)
         presentVisitableForSession(session, URL: URL)
     }
@@ -97,7 +97,7 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
     func submitFilter(){
         
         // set a new visitable that includes
-        let URL = NSURL(string: "\(host)/\(campus)/\(app_type)/?\(params)")!
+        let URL = NSURL(string: "\(host)\(campus)/\(app_type)/?\(params)")!
         let sessionURL = session.webView.URL?.absoluteString
         
         // force reload (replace) of viewcontroller if params have changed or cleared

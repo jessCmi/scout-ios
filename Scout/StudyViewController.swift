@@ -13,7 +13,7 @@ import Turbolinks
 class StudyViewController: ApplicationController {
     
     override var URL: NSURL {
-        return NSURL(string: "\(host)/\(campus)/study/")!
+        return NSURL(string: "\(host)\(campus)/study/")!
     }
     
     
@@ -21,7 +21,7 @@ class StudyViewController: ApplicationController {
     override func presentVisitableForSession(session: Session, URL: NSURL, action: Action = .Advance) {
         
         let visitable = VisitableViewController(URL: URL)
-        
+        print(URL.path)
         // study home
         if URL.path == "/h/\(campus)/study" {
             

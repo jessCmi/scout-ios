@@ -13,7 +13,7 @@ import Turbolinks
 class FoodViewController: ApplicationController {
     
     override var URL: NSURL {
-        return NSURL(string: "\(host)/\(campus)/food/")!
+        return NSURL(string: "\(host)\(campus)/food/")!
     }
     
     // food view controller

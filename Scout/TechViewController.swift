@@ -13,7 +13,7 @@ import Turbolinks
 class TechViewController: ApplicationController {
     
     override var URL: NSURL {
-        return NSURL(string: "\(host)/\(campus)/tech/")!
+        return NSURL(string: "\(host)\(campus)/tech/")!
     }
     
     // tech view controller

@@ -13,7 +13,7 @@ import Turbolinks
 class DiscoverViewController: ApplicationController {
     
     override var URL: NSURL {
-        return NSURL(string: "\(host)/\(campus)/")!
+        return NSURL(string: "\(host)\(campus)/")!
     }
     
     // discover visit controller
