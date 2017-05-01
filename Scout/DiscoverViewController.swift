@@ -12,14 +12,14 @@ import Turbolinks
 
 class DiscoverViewController: ApplicationController {
     
-    override var URL: NSURL {
-        return NSURL(string: "\(host)\(campus)/")!
+    override var URL: Foundation.URL {
+        return Foundation.URL(string: "\(host)\(campus)/")!
     }
     
     // discover visit controller
-    override func presentVisitableForSession(session: Session, URL: NSURL, action: Action = .Advance) {
+    override func presentVisitableForSession(_ session: Session, URL: Foundation.URL, action: Action = .Advance) {
         
-        let visitable = VisitableViewController(URL: URL)
+        let visitable = VisitableViewController(url: URL)
         
         // discover home
 //        if URL.path == "/h/\(campus)" {
@@ -41,7 +41,7 @@ class DiscoverViewController: ApplicationController {
         if action == .Advance {
             pushViewController(visitable, animated: true)
         } else if action == .Replace {
-            popViewControllerAnimated(true)
+            popViewController(animated: true)
             //pushViewController(visitable, animated: false)
             setViewControllers([visitable], animated: false)
         }
