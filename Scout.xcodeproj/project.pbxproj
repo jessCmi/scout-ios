@@ -22,8 +22,8 @@
 		85929A8A1DDC1EAF0020F311 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85929A891DDC1EAF0020F311 /* Launch Screen.storyboard */; };
 		8989FE211DCA5707006D02E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8989FE201DCA5707006D02E9 /* CoreLocation.framework */; };
 		89A082151DC171E100C25FE6 /* scoutConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89A082141DC171E100C25FE6 /* scoutConfig.plist */; };
-		C8E246BB1EB781AE0027EC38 /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E246BA1EB781AE0027EC38 /* Turbolinks.framework */; };
-		C8E246BC1EB789550027EC38 /* Turbolinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8E246BA1EB781AE0027EC38 /* Turbolinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C86B74861EC0B0CE001D0E4B /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B74841EC0B0BD001D0E4B /* Turbolinks.framework */; };
+		C86B74871EC0B0CE001D0E4B /* Turbolinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C86B74841EC0B0BD001D0E4B /* Turbolinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C8E246BC1EB789550027EC38 /* Turbolinks.framework in Embed Frameworks */,
+				C86B74871EC0B0CE001D0E4B /* Turbolinks.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,7 +79,7 @@
 		85929A891DDC1EAF0020F311 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8989FE201DCA5707006D02E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		89A082141DC171E100C25FE6 /* scoutConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scoutConfig.plist; sourceTree = "<group>"; };
-		C8E246BA1EB781AE0027EC38 /* Turbolinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Turbolinks.framework; sourceTree = "<group>"; };
+		C86B74841EC0B0BD001D0E4B /* Turbolinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Turbolinks.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8E246BB1EB781AE0027EC38 /* Turbolinks.framework in Frameworks */,
 				8989FE211DCA5707006D02E9 /* CoreLocation.framework in Frameworks */,
+				C86B74861EC0B0CE001D0E4B /* Turbolinks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +171,7 @@
 		8989FE1F1DCA5706006D02E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C8E246BA1EB781AE0027EC38 /* Turbolinks.framework */,
+				C86B74841EC0B0BD001D0E4B /* Turbolinks.framework */,
 				8989FE201DCA5707006D02E9 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
