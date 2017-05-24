@@ -14,14 +14,15 @@ var host = ""
 var campus = ""
 var app_type = ""
 var params = ""
+var location = ""
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
         // read in config
         if let path = Bundle.main.path(forResource: "scoutConfig", ofType: "plist"), let config = NSDictionary(contentsOfFile: path) as? [String: AnyObject] {
             host = config["scout_host"] as! String
@@ -32,14 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().tintColor = hexStringToUIColor("#ffffff")
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : hexStringToUIColor("#ffffff")]
-        
+
         // globally set tint color
         self.window!.tintColor = hexStringToUIColor("#514DA3")
-        
+
         // Override point for customization after application launch.
         return true
     }
-    
+
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -61,32 +62,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
+
     // custom hex color function
     func hexStringToUIColor (_ hex:String) -> UIColor {
         
+        //var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercased()
+
         var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
-        
+
         if (cString.hasPrefix("#")) {
             cString = (cString as NSString).substring(from: 1)
         }
-        
+
         if (cString.characters.count != 6) {
             return UIColor.gray
         }
-        
+
         let rString = (cString as NSString).substring(to: 2)
         let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
         let bString = ((cString as NSString).substring(from: 4) as NSString).substring(to: 2)
-        
+
         var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
         Scanner(string: rString).scanHexInt32(&r)
         Scanner(string: gString).scanHexInt32(&g)
         Scanner(string: bString).scanHexInt32(&b)
-        
-        
+
+
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
     }
 
 }
-

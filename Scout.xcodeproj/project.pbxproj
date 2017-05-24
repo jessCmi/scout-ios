@@ -23,8 +23,7 @@
 		8989FE211DCA5707006D02E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8989FE201DCA5707006D02E9 /* CoreLocation.framework */; };
 		89A082151DC171E100C25FE6 /* scoutConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89A082141DC171E100C25FE6 /* scoutConfig.plist */; };
 		C836847A1EC4E98800E252E0 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = C83684791EC4E98800E252E0 /* AppIcon.appiconset */; };
-		C879334B1EC5EEE4008EAD8D /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87933491EC5EEDB008EAD8D /* Turbolinks.framework */; };
-		C879334C1EC5EEE4008EAD8D /* Turbolinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C87933491EC5EEDB008EAD8D /* Turbolinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89E8493D1EC6565D00F8944A /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E8493C1EC6565D00F8944A /* Turbolinks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C879334C1EC5EEE4008EAD8D /* Turbolinks.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +79,7 @@
 		8989FE201DCA5707006D02E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		89A082141DC171E100C25FE6 /* scoutConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scoutConfig.plist; sourceTree = "<group>"; };
 		C83684791EC4E98800E252E0 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
-		C87933491EC5EEDB008EAD8D /* Turbolinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Turbolinks.framework; sourceTree = "<group>"; };
+		89E8493C1EC6565D00F8944A /* Turbolinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Turbolinks.framework; path = Carthage/Build/iOS/Turbolinks.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8989FE211DCA5707006D02E9 /* CoreLocation.framework in Frameworks */,
-				C879334B1EC5EEE4008EAD8D /* Turbolinks.framework in Frameworks */,
+				89E8493D1EC6565D00F8944A /* Turbolinks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +112,6 @@
 		854034461CB5AE5100C0C7FD = {
 			isa = PBXGroup;
 			children = (
-				C87933491EC5EEDB008EAD8D /* Turbolinks.framework */,
 				854034511CB5AE5100C0C7FD /* Scout */,
 				854034681CB5AE5100C0C7FD /* ScoutTests */,
 				854034731CB5AE5100C0C7FD /* ScoutUITests */,
@@ -175,6 +172,7 @@
 		8989FE1F1DCA5706006D02E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89E8493C1EC6565D00F8944A /* Turbolinks.framework */,
 				8989FE201DCA5707006D02E9 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -191,6 +189,7 @@
 				8540344C1CB5AE5100C0C7FD /* Frameworks */,
 				8540344D1CB5AE5100C0C7FD /* Resources */,
 				8552517B1DE3AD1F0089ED4D /* Embed Frameworks */,
+				89E8493E1EC6566F00F8944A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,7 +249,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Charlon Palacay";
+				ORGANIZATIONNAME = "UW-IT AXDD";
 				TargetAttributes = {
 					8540344E1CB5AE5100C0C7FD = {
 						CreatedOnToolsVersion = 7.3;
@@ -365,6 +364,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScoutUITests/Pods-ScoutUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		89E8493E1EC6566F00F8944A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Turbolinks.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		8E0ED794F12359030A667A28 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -555,14 +568,14 @@
 				DEVELOPMENT_TEAM = AUB9XW4722;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Turbolinks/Products/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Scout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.smith.SmithScape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,14 +588,14 @@
 				DEVELOPMENT_TEAM = AUB9XW4722;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Turbolinks/Products/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Scout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.smith.SmithScape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -590,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ScoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.ScoutTests";
@@ -603,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ScoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.ScoutTests";
@@ -615,6 +630,7 @@
 		854034801CB5AE5100C0C7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ScoutUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.ScoutUITests";
@@ -627,6 +643,7 @@
 		854034811CB5AE5100C0C7FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ScoutUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.ScoutUITests";
