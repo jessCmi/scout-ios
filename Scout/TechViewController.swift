@@ -16,10 +16,10 @@ class TechViewController: ApplicationController {
     override var URL: Foundation.URL {
 
         if CLLocationManager.locationServicesEnabled() {
-            return Foundation.URL(string: "\(host)/\(campus)/tech/?\(location)")!
+            return Foundation.URL(string: "\(host)\(campus)/tech/?\(location)")!
 
         } else {
-            return Foundation.URL(string: "\(host)/\(campus)/tech/")!
+            return Foundation.URL(string: "\(host)\(campus)/tech/")!
         }
     }
 

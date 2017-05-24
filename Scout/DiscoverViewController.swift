@@ -16,10 +16,10 @@ class DiscoverViewController: ApplicationController {
     override var URL: Foundation.URL {
 
         if CLLocationManager.locationServicesEnabled() {
-            return Foundation.URL(string: "\(host)/\(campus)/?\(location)")!
+            return Foundation.URL(string: "\(host)\(campus)/?\(location)")!
 
         } else {
-            return Foundation.URL(string: "\(host)/\(campus)/")!
+            return Foundation.URL(string: "\(host)\(campus)/")!
         }
     }
 

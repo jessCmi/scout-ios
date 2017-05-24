@@ -16,10 +16,10 @@ class FoodViewController: ApplicationController {
     override var URL: Foundation.URL {
 
         if CLLocationManager.locationServicesEnabled() {
-            return Foundation.URL(string: "\(host)/\(campus)/food/?\(location)")!
+            return Foundation.URL(string: "\(host)\(campus)/food/?\(location)")!
 
         } else {
-            return Foundation.URL(string: "\(host)/\(campus)/food/")!
+            return Foundation.URL(string: "\(host)\(campus)/food/")!
         }
     }
 
