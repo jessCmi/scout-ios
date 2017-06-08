@@ -131,7 +131,6 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
         // 2
         let smithAction = UIAlertAction(title: "Smith", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
-            //print("Seattle was selected")
             campus = "smith"
             self.presentVisitableForSession(self.session, URL: self.URL, action: .Replace)
         })
@@ -139,26 +138,17 @@ class ApplicationController: UINavigationController,  CLLocationManagerDelegate 
         //
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
             (alert: UIAlertAction!) -> Void in
-            //print("Cancelled")
         })
 
 
         // 4
         optionMenu.addAction(smithAction)
-//        optionMenu.addAction(seattleAction)
-//        optionMenu.addAction(bothellAction)
-//        optionMenu.addAction(tacomaAction)
 
         optionMenu.addAction(cancelAction)
 
         // 5
         self.present(optionMenu, animated: true, completion: nil)
 
-    }
-
-    func openSettings() {
-        // no longer supported in ios10.. sucks!
-        // UIApplication.sharedApplication().openURL(NSURL(string:"prefs:root=Scout")!)
     }
 
 

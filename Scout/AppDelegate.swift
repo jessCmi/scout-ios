@@ -29,13 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             campus = config["default_campus"] as! String
         }
 
-        UINavigationBar.appearance().barTintColor = hexStringToUIColor("#514DA3")
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0, green: 79 / 255, blue: 113 / 255, alpha: 1)
         UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().tintColor = hexStringToUIColor("#ffffff")
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : hexStringToUIColor("#ffffff")]
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
 
         // globally set tint color
-        self.window!.tintColor = hexStringToUIColor("#514DA3")
+        self.window!.tintColor = UIColor(red: 0, green: 79 / 255, blue: 113 / 255, alpha: 1)
 
         // Override point for customization after application launch.
         return true
@@ -61,34 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    // custom hex color function
-    func hexStringToUIColor (_ hex:String) -> UIColor {
-        
-        //var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercased()
-
-        var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
-
-        if (cString.hasPrefix("#")) {
-            cString = (cString as NSString).substring(from: 1)
-        }
-
-        if (cString.characters.count != 6) {
-            return UIColor.gray
-        }
-
-        let rString = (cString as NSString).substring(to: 2)
-        let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
-        let bString = ((cString as NSString).substring(from: 4) as NSString).substring(to: 2)
-
-        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
-        Scanner(string: rString).scanHexInt32(&r)
-        Scanner(string: gString).scanHexInt32(&g)
-        Scanner(string: bString).scanHexInt32(&b)
-
-
-        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
     }
 
 }

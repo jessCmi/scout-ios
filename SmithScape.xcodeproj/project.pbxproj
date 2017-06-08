@@ -58,17 +58,17 @@
 
 /* Begin PBXFileReference section */
 		851B190E1D5DA7AC0061B30D /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
-		8540344F1CB5AE5100C0C7FD /* Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8540344F1CB5AE5100C0C7FD /* Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Scout.app; path = SmithScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854034521CB5AE5100C0C7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		854034541CB5AE5100C0C7FD /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FoodViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		854034561CB5AE5100C0C7FD /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StudyViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		854034591CB5AE5100C0C7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8540345B1CB5AE5100C0C7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		854034601CB5AE5100C0C7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		854034651CB5AE5100C0C7FD /* ScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		854034651CB5AE5100C0C7FD /* ScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ScoutTests.xctest; path = SmithScapeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		854034691CB5AE5100C0C7FD /* ScoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutTests.swift; sourceTree = "<group>"; };
 		8540346B1CB5AE5100C0C7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		854034701CB5AE5100C0C7FD /* ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		854034701CB5AE5100C0C7FD /* ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ScoutUITests.xctest; path = SmithScapeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		854034741CB5AE5100C0C7FD /* ScoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutUITests.swift; sourceTree = "<group>"; };
 		854034761CB5AE5100C0C7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		854034851CB5B17F00C0C7FD /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -181,9 +181,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8540344E1CB5AE5100C0C7FD /* Scout */ = {
+		8540344E1CB5AE5100C0C7FD /* SmithScape */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 854034791CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "Scout" */;
+			buildConfigurationList = 854034791CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "SmithScape" */;
 			buildPhases = (
 				8540344B1CB5AE5100C0C7FD /* Sources */,
 				8540344C1CB5AE5100C0C7FD /* Frameworks */,
@@ -197,14 +197,14 @@
 			);
 			dependencies = (
 			);
-			name = Scout;
+			name = SmithScape;
 			productName = Scout;
 			productReference = 8540344F1CB5AE5100C0C7FD /* Scout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		854034641CB5AE5100C0C7FD /* ScoutTests */ = {
+		854034641CB5AE5100C0C7FD /* SmithScapeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8540347C1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "ScoutTests" */;
+			buildConfigurationList = 8540347C1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "SmithScapeTests" */;
 			buildPhases = (
 				8E0ED794F12359030A667A28 /* [CP] Check Pods Manifest.lock */,
 				854034611CB5AE5100C0C7FD /* Sources */,
@@ -218,14 +218,14 @@
 			dependencies = (
 				854034671CB5AE5100C0C7FD /* PBXTargetDependency */,
 			);
-			name = ScoutTests;
+			name = SmithScapeTests;
 			productName = ScoutTests;
 			productReference = 854034651CB5AE5100C0C7FD /* ScoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8540346F1CB5AE5100C0C7FD /* ScoutUITests */ = {
+		8540346F1CB5AE5100C0C7FD /* SmithScapeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8540347F1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "ScoutUITests" */;
+			buildConfigurationList = 8540347F1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "SmithScapeUITests" */;
 			buildPhases = (
 				E47AE78E8EA4EBDC34A9428E /* [CP] Check Pods Manifest.lock */,
 				8540346C1CB5AE5100C0C7FD /* Sources */,
@@ -238,7 +238,7 @@
 			dependencies = (
 				854034721CB5AE5100C0C7FD /* PBXTargetDependency */,
 			);
-			name = ScoutUITests;
+			name = SmithScapeUITests;
 			productName = ScoutUITests;
 			productReference = 854034701CB5AE5100C0C7FD /* ScoutUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					8540344E1CB5AE5100C0C7FD = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = AUB9XW4722;
+						DevelopmentTeam = YGX8KU7GL5;
 						LastSwiftMigration = 0830;
 					};
 					854034641CB5AE5100C0C7FD = {
@@ -272,7 +272,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8540344A1CB5AE5100C0C7FD /* Build configuration list for PBXProject "Scout" */;
+			buildConfigurationList = 8540344A1CB5AE5100C0C7FD /* Build configuration list for PBXProject "SmithScape" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -285,9 +285,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8540344E1CB5AE5100C0C7FD /* Scout */,
-				854034641CB5AE5100C0C7FD /* ScoutTests */,
-				8540346F1CB5AE5100C0C7FD /* ScoutUITests */,
+				8540344E1CB5AE5100C0C7FD /* SmithScape */,
+				854034641CB5AE5100C0C7FD /* SmithScapeTests */,
+				8540346F1CB5AE5100C0C7FD /* SmithScapeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -476,12 +476,12 @@
 /* Begin PBXTargetDependency section */
 		854034671CB5AE5100C0C7FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8540344E1CB5AE5100C0C7FD /* Scout */;
+			target = 8540344E1CB5AE5100C0C7FD /* SmithScape */;
 			targetProxy = 854034661CB5AE5100C0C7FD /* PBXContainerItemProxy */;
 		};
 		854034721CB5AE5100C0C7FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8540344E1CB5AE5100C0C7FD /* Scout */;
+			target = 8540344E1CB5AE5100C0C7FD /* SmithScape */;
 			targetProxy = 854034711CB5AE5100C0C7FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -593,14 +593,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = AUB9XW4722;
+				DEVELOPMENT_TEAM = YGX8KU7GL5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Scout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.smith.SmithScape;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.smith.Smith-Scape";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -613,14 +613,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = AUB9XW4722;
+				DEVELOPMENT_TEAM = YGX8KU7GL5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Scout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.smith.SmithScape;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.smith.Smith-Scape";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -637,7 +637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.ScoutTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scout.app/Scout";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmithScape.app/SmithScape";
 			};
 			name = Debug;
 		};
@@ -651,7 +651,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.ScoutTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scout.app/Scout";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmithScape.app/SmithScape";
 			};
 			name = Release;
 		};
@@ -684,7 +684,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8540344A1CB5AE5100C0C7FD /* Build configuration list for PBXProject "Scout" */ = {
+		8540344A1CB5AE5100C0C7FD /* Build configuration list for PBXProject "SmithScape" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				854034771CB5AE5100C0C7FD /* Debug */,
@@ -693,7 +693,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		854034791CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "Scout" */ = {
+		854034791CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "SmithScape" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8540347A1CB5AE5100C0C7FD /* Debug */,
@@ -702,7 +702,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8540347C1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "ScoutTests" */ = {
+		8540347C1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "SmithScapeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8540347D1CB5AE5100C0C7FD /* Debug */,
@@ -711,7 +711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8540347F1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "ScoutUITests" */ = {
+		8540347F1CB5AE5100C0C7FD /* Build configuration list for PBXNativeTarget "SmithScapeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				854034801CB5AE5100C0C7FD /* Debug */,
