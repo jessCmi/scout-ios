@@ -9,18 +9,11 @@
 import UIKit
 import WebKit
 import Turbolinks
-import CoreLocation
 
 class TechViewController: ApplicationController {
 
     override var URL: Foundation.URL {
-
-        if CLLocationManager.locationServicesEnabled() {
-            return Foundation.URL(string: "\(host)\(campus)/tech/?\(location)")!
-
-        } else {
-            return Foundation.URL(string: "\(host)\(campus)/tech/")!
-        }
+        return Foundation.URL(string: "\(host)\(campus)/tech/")!
     }
 
     // tech view controller

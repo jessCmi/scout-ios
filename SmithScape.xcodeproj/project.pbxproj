@@ -20,7 +20,6 @@
 		8572A33A1D38169300D80248 /* TechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572A3391D38169300D80248 /* TechViewController.swift */; };
 		8572A33C1D382F0500D80248 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572A33B1D382F0500D80248 /* DiscoverViewController.swift */; };
 		85929A8A1DDC1EAF0020F311 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85929A891DDC1EAF0020F311 /* Launch Screen.storyboard */; };
-		8989FE211DCA5707006D02E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8989FE201DCA5707006D02E9 /* CoreLocation.framework */; };
 		89A082151DC171E100C25FE6 /* scoutConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89A082141DC171E100C25FE6 /* scoutConfig.plist */; };
 		89E8493D1EC6565D00F8944A /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E8493C1EC6565D00F8944A /* Turbolinks.framework */; };
 		C836847A1EC4E98800E252E0 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = C83684791EC4E98800E252E0 /* AppIcon.appiconset */; };
@@ -87,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8989FE211DCA5707006D02E9 /* CoreLocation.framework in Frameworks */,
 				89E8493D1EC6565D00F8944A /* Turbolinks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

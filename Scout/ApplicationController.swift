@@ -9,13 +9,9 @@
 import UIKit
 import WebKit
 import Turbolinks
-import CoreLocation
-import CoreMotion
 
-class ApplicationController: UINavigationController,  CLLocationManagerDelegate {
+class ApplicationController: UINavigationController {
 
-    let locationManager = CLLocationManager()
-    let activityManager = CMMotionActivityManager()
 
     var URL: Foundation.URL {
         return Foundation.URL(string: "\(host)\(campus)/")!
@@ -156,16 +152,10 @@ extension ApplicationController: SessionDelegate {
     func sessionDidStartRequest(_ session: Session) {
         application.isNetworkActivityIndicatorVisible = true
 
-        // send user's location once webview has finished loading
-        // setUserLocation()
-
     }
 
     func sessionDidFinishRequest(_ session: Session) {
         application.isNetworkActivityIndicatorVisible = false
-
-        // send user's location once webview has finished loading
-        // setUserLocation()
     }
 
 }
