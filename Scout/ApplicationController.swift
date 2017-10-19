@@ -35,6 +35,7 @@ class ApplicationController: UINavigationController {
 
     fileprivate lazy var session: Session = {
         let session = Session(webViewConfiguration: self.webViewConfiguration)
+        session.webView.allowsLinkPreview = false
         session.delegate = self
         return session
     }()
@@ -167,6 +168,13 @@ extension ApplicationController: WKScriptMessageHandler {
         if let message = message.body as? String {
             //print(message)
             params = message
+            if (app_type == "food") {
+                food_params = params
+            } else if (app_type == "study") {
+                study_params = params
+            } else if (app_type == "tech") {
+                tech_params = params
+            }
         }
 
     }
