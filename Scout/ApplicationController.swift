@@ -67,13 +67,13 @@ class ApplicationController: UINavigationController {
     }
 
     // show filter
-    func presentFilter() {
+    @objc func presentFilter() {
         let URL = Foundation.URL(string: "\(host)\(campus)/\(app_type)/filter/?\(params)")!
         presentVisitableForSession(session, URL: URL)
     }
 
     // submit filter function when user clickes on the filter back button
-    func submitFilter(){
+    @objc func submitFilter(){
 
         // set a new visitable that includes
         let visitURL = Foundation.URL(string: "\(host)\(campus)/\(app_type)/?\(params)")!
@@ -99,7 +99,7 @@ class ApplicationController: UINavigationController {
 
     }
 
-    func clearFilter(){
+    @objc func clearFilter(){
         // evaluate js by submitting click event
         session.webView.evaluateJavaScript("document.getElementById('filter_clear').click()", completionHandler: nil)
     }
